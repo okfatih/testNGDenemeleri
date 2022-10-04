@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="runSpesificClasses">
+    <test name="classlar">
+        <classes>
+            <class name="tests.TwitterTest.C01_TwitterTest"></class>
+            <class name="tests.SmokeTestforBlueRentalCars.NegativeLoginTestforBluerentalCars"></class>
+            <class name="tests.Day01.Priority">
+                <methods>
+
+                    <include name="bestbuyTesti"></include>
+                    <exclude name="techProTesti"></exclude>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

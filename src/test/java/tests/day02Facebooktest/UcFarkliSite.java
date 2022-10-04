@@ -4,7 +4,7 @@ import Utilities.Driver;
 import org.testng.annotations.Test;
 
 public class UcFarkliSite {
-    @Test
+    @Test (groups = "1")
     public void test1() {
         Driver.getDriver().get("https://amazon.com");
         Driver.closeDriver(); // amazona gittikten sonra kapatacak  FAKAT durmayacak burdan devam edp youtube u açıcak

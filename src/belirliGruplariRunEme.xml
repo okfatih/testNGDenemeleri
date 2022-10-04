@@ -1,0 +1,28 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="grubaGore">
+    <test name="groep">
+
+        <groups>
+            <run>
+                <include name="G2"> </include>
+
+            </run>
+        </groups>
+        <packages>
+            <package name="tests.TwitterTest"> </package>
+            <package name="tests.SmokeTestforBlueRentalCars"></package>
+
+
+        </packages>
+    </test>
+    <test name="grubaGore2">
+        <groups>
+            <run>
+                <exclude name="P07"></exclude>
+            </run>
+        </groups>
+        <packages>
+            <package name="tests.Pratik"></package>
+        </packages>
+    </test>
+</suite>

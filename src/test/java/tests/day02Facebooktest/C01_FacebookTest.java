@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 public class C01_FacebookTest {
-    @Test
+    @Test (groups = "grup1")
     public void test1() {
         SoftAssert softAssert = new SoftAssert();
         FacebookPage facebookPage = new FacebookPage();

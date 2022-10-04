@@ -19,6 +19,7 @@ public class C02_ConfigReaderKullanimi {
         //cookies kabul et
         facebookPage.cookies.click();
         //Username wrong username gir
+
         facebookPage.loginButton.sendKeys(ConfigReader.getProperty("fbWrongUserName"));
         // Password wrong password
         facebookPage.password.sendKeys(ConfigReader.getProperty("fbWrongPass"));

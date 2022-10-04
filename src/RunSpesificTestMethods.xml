@@ -1,0 +1,32 @@
+<!-- Methodlarımız classların içindedir
+         Bir classta tüm test methodları çalışacaksa bunun için
+         direkt class seçmek yeterlidir.
+         Method seçmemizin temel amacaı
+         class içersinde sadece belirlenen methodların
+         çalışması veya belirlenen methodlar dışındaki tüm
+         methodların çalışmasıdır.
+
+         Eğer çalışacak spesifik methodları belirtmek istersek
+         inclusive çalışmayacakları seçersek excludde keyword ları
+         kullanılır
+
+        suite tagının içersine yazılacak attribute consolde yazılacak
+        methodların daha az veya çok olmasını belirler
+        1. en az
+        10 en çok
+         -->
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="istenen methodu run etme">
+    <test name="method">
+        <classes>
+            <class name="tests.Day01.Priority">
+
+
+                <methods>
+                    <exclude name="amazonTesti"></exclude>
+                </methods>
+            </class>
+        </classes>
+
+    </test>
+</suite>

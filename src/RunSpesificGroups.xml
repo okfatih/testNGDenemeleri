@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="SpesificGroups">
+    <test name="gruplar">
+        <groups>
+            <run>
+                <include name="grup2"></include>
+
+            </run>
+        </groups>
+        <packages>
+            <package name="tests.SmokeTestforBlueRentalCars"></package>
+            <package name="tests.Day01"></package>
+            <package name="tests.day02Facebooktest"></package>
+        </packages>
+    </test>
+</suite>

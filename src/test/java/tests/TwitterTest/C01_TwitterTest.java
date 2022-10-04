@@ -8,7 +8,7 @@ import org.openqa.selenium.devtools.v85.network.model.DataReceived;
 import org.testng.annotations.Test;
 
 public class C01_TwitterTest {
-    @Test
+    @Test (groups = "G2")
     public void test1() {
         TwitterPage twitterPage = new TwitterPage();//Twitter pageDeki constructor ı kullanıyoruz
         Driver.getDriver().get("https://twitter.com");

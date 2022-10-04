@@ -1,5 +1,7 @@
 package tests.Day01;
 
+import Utilities.ConfigReader;
+import Utilities.Driver;
 import Utilities.TestBase;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Select;
@@ -9,6 +11,7 @@ import org.testng.asserts.SoftAssert;
 public class SoftAssertPratik extends TestBase {
     @Test
     public void test01() {
+
         SoftAssert softAssert = new SoftAssert();
 
         driver.get("http://zero.webappsecurity.com/");
