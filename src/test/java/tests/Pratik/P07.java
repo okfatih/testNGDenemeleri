@@ -3,12 +3,14 @@ package tests.Pratik;
 
 import Pages.WebuniversityPage;
 import Utilities.Driver;
-import jdk.dynalink.linker.LinkerServices;
+import Utilities.ReusableMethods;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -33,6 +35,18 @@ public class P07  {
 
         List<WebElement> delete = webuniversityPage.deleteButtons;
         delete.stream().forEach(t->t.click());
+    }
+
+    @Test
+    public void test2() throws IOException {
+        WebuniversityPage webuniversityPage = new WebuniversityPage();
+        Driver.getDriver().get("http://webdriveruniversity.com/To-Do-List/index.html");
+        List<WebElement> todoListesi = Driver.getDriver().findElements(By.xpath("//li"));
+         todoListesi.stream().forEach(t-> System.out.println(t.getText()));
+        System.out.println(ReusableMethods.getElementsText(todoListesi));
+        ReusableMethods.waitFor(5);
+        ReusableMethods.getScreenshotWebElement("Liste",webuniversityPage.text);
+
     }
 }
 /*

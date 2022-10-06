@@ -4,22 +4,35 @@ import Pages.AmazonPage;
 import Pages.AutomationExercisePage;
 import Utilities.ConfigReader;
 import Utilities.Driver;
+import Utilities.ReusableMethods;
+import Utilities.TestBaseRapor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-public class AutomationExerciseTest {
+import java.io.IOException;
+
+public class AutomationExerciseTest extends TestBaseRapor {
     @Test(groups = "G2")
-    public void test01() throws InterruptedException {
+    public void test01() throws InterruptedException, IOException {
+        extentTest = extentReports.createTest("Automation ex","display test");
+       extentTest.info("Automationexercise sitesine gidildi");
+        ReusableMethods.getScreenshot("automationexercise Site anaSayfası");
         Driver.getDriver().get("http://automationexercise.com");
         AutomationExercisePage automationExercisePage = new AutomationExercisePage();
         SoftAssert softAssert = new SoftAssert();
+        extentTest.info("HomePage görülüp görülmediği test edildi");
         softAssert.assertTrue(automationExercisePage.homepage.isDisplayed());
+        extentTest.info("Alışveriş kutusu tıklandı");
         automationExercisePage.alisverisKutus.click();
         Actions actions = new Actions(Driver.getDriver());
+        extentTest.info("Subscribe bölümüne gidilip görülüp görülmedi test edildi");
         actions.moveToElement(automationExercisePage.subscText).perform();
+        ReusableMethods.getScreenshotWebElement("subscription",automationExercisePage.subscText);
         softAssert.assertTrue(automationExercisePage.subscText.isDisplayed());
+        extentTest.info("Email kutucuğu dolduruldu");
+
         automationExercisePage.
                     emailBox.sendKeys("raysting@gmail.com",Keys.ENTER);
         Thread.sleep(3000);

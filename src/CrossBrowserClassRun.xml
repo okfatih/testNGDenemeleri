@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Cross browser class run etme">
+    <test name="Cross browser chrome">
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="tests.Cross_Browser.C01_AssertionsCross"></class>
+            <class name="tests.Cross_Browser.C02_SoftAssertionCross"></class>
+        </classes>
+    </test>
+    <test name="Cross browser firefox">
+        <parameter name="browser" value="firefox"></parameter>
+        <classes>
+            <class name="tests.Cross_Browser.C01_AssertionsCross"></class>
+            <class name="tests.Cross_Browser.C02_SoftAssertionCross"></class>
+        </classes>
+    </test>
+</suite>

@@ -3,25 +3,38 @@ package tests.SmokeTestforBlueRentalCars;
 import Pages.BluerentalcarPage;
 import Utilities.ConfigReader;
 import Utilities.Driver;
+import Utilities.ReusableMethods;
+import Utilities.TestBaseRapor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.io.IOException;
 import java.security.Key;
 
-public class PositiveLoginTestforBluerentalCars {
+public class PositiveLoginTestforBluerentalCars extends TestBaseRapor {
     @Test (groups = "grup2")
-    public void test01() {
+
+    public void test01() throws IOException {
+        extentTest = extentReports.createTest("Pozitif Test","Can login with valid credentials");
+        extentTest.info("Go to website");
         Driver.getDriver().get(ConfigReader.getProperty("blueCars")); //bluecars a git
         BluerentalcarPage bluerentalcarPage = new BluerentalcarPage();
+        extentTest.info("Login button has been clicked");
         bluerentalcarPage.login.click();
+        extentTest.info("Valid email has been entered");
         bluerentalcarPage.email.sendKeys(ConfigReader.getProperty("brcValidEmail"));
         Actions actions = new Actions(Driver.getDriver());
+        extentTest.info("Valid pass has been entered");
         actions.sendKeys(Keys.TAB).sendKeys(ConfigReader.getProperty("brcValidPass"), Keys.ENTER).perform();
+        extentTest.info("Checked if the login was successfull");
         System.out.println(bluerentalcarPage.successfulLogin.getText());
+        ReusableMethods.getScreenshotWebElement("Login",bluerentalcarPage.successfulLogin);
+        ReusableMethods.getScreenshot("Login'e gidildi");
         Assert.assertTrue(bluerentalcarPage.successfulLogin.isDisplayed());
-      //  Driver.closeDriver();
+        extentTest.pass("Login is successful");
+             Driver.closeDriver();
 
     }
 
