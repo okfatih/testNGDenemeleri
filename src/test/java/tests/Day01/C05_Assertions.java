@@ -1,6 +1,6 @@
 package tests.Day01;
 
-import Utilities.TestBase;
+import utilities.TestBase;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;

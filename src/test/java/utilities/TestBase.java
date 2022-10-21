@@ -1,4 +1,4 @@
-package Utilities;
+package utilities;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
@@ -36,6 +36,6 @@ public abstract  class TestBase {
     }
     @AfterMethod
     public void tearDown(){
-       // driver.quit();
+        driver.quit();
     }
 }

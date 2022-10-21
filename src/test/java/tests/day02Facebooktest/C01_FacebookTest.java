@@ -1,7 +1,7 @@
 package tests.day02Facebooktest;
 
 import Pages.FacebookPage;
-import Utilities.Driver;
+import utilities.Driver;
 import com.github.javafaker.Faker;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;

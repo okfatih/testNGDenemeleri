@@ -1,11 +1,9 @@
 package tests;
 
-import Pages.AmazonPage;
 import Pages.AutomationExercisePage;
-import Utilities.ConfigReader;
-import Utilities.Driver;
-import Utilities.ReusableMethods;
-import Utilities.TestBaseRapor;
+import utilities.Driver;
+import utilities.ReusableMethods;
+import utilities.TestBaseRapor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;

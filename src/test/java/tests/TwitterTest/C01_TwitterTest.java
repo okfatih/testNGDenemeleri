@@ -1,11 +1,10 @@
 package tests.TwitterTest;
 
 import Pages.TwitterPage;
-import Utilities.Driver;
-import Utilities.TestBaseRapor;
+import utilities.Driver;
+import utilities.TestBaseRapor;
 import com.github.javafaker.Faker;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.devtools.v85.network.model.DataReceived;
 import org.testng.annotations.Test;
 
 public class C01_TwitterTest extends TestBaseRapor {

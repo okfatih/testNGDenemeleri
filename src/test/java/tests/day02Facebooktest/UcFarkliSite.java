@@ -1,6 +1,6 @@
 package tests.day02Facebooktest;
 
-import Utilities.Driver;
+import utilities.Driver;
 import org.testng.annotations.Test;
 
 public class UcFarkliSite {

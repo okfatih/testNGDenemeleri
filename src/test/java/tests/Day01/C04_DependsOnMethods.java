@@ -1,6 +1,5 @@
 package tests.Day01;
 
-import Utilities.TestBase;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -25,7 +24,7 @@ public class C04_DependsOnMethods  {
     }
     @AfterClass
     public void TearTown(){
-           // driver.close();
+            driver.close();
     }
 
 

@@ -1,17 +1,16 @@
 package tests.SmokeTestforBlueRentalCars;
 
 import Pages.BluerentalcarPage;
-import Utilities.ConfigReader;
-import Utilities.Driver;
-import Utilities.ReusableMethods;
-import Utilities.TestBaseRapor;
+import utilities.ConfigReader;
+import utilities.Driver;
+import utilities.ReusableMethods;
+import utilities.TestBaseRapor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
-import java.security.Key;
 
 public class PositiveLoginTestforBluerentalCars extends TestBaseRapor {
     @Test (groups = "grup2")

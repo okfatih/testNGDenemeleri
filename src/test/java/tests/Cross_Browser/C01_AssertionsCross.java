@@ -1,8 +1,6 @@
 package tests.Cross_Browser;
 
-import Utilities.CrossDriver;
-import Utilities.TestBase;
-import Utilities.TestBaseCross;
+import utilities.TestBasseCross;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -10,7 +8,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-public class C01_AssertionsCross extends TestBaseCross {
+public class C01_AssertionsCross extends TestBasseCross {
     @Test
     public void test1() {
         SoftAssert softAssert  = new SoftAssert();
@@ -27,7 +25,6 @@ public class C01_AssertionsCross extends TestBaseCross {
         Assert.assertTrue(resultYazi.isDisplayed());
         //arama sonucunun nutella içerdiğini test et
         Assert.assertTrue(resultYazi.getText().contains("Nutella"));
-
 
 
     }

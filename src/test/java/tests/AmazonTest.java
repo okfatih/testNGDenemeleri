@@ -1,12 +1,9 @@
 package tests;
 
 import Pages.AmazonPage;
-import Utilities.ConfigReader;
-import Utilities.Driver;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
+import utilities.ConfigReader;
+import utilities.Driver;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;

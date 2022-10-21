@@ -1,6 +1,6 @@
 package tests.Day01;
 
-import Utilities.TestBase;
+import utilities.TestBase;
 import org.testng.annotations.Test;
 
 public class Priority extends TestBase {

@@ -1,19 +1,18 @@
 package tests.Cross_Browser;
 
-import Utilities.CrossDriver;
-import Utilities.TestBase;
-import Utilities.TestBaseCross;
+import utilities.TestBasseCross;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-public class C02_SoftAssertionCross extends TestBaseCross {
-    SoftAssert softAssert;
+public class C02_SoftAssertionCross extends TestBasseCross {
+
     @Test
 
     public void test1() {
+        SoftAssert softAssert = new SoftAssert();
 
         //Amazon title ın amazon içerdiğini test et
         driver.get("https://amazon.com");
@@ -32,6 +31,8 @@ public class C02_SoftAssertionCross extends TestBaseCross {
 
         //softAssert e bitiş satırını söylemek için assertAll kullanılır
         softAssert.assertAll();
+
+
 
     }
 }

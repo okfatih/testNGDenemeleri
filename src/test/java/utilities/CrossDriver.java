@@ -1,4 +1,4 @@
-package Utilities;
+package utilities;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
@@ -9,27 +9,30 @@ import org.openqa.selenium.safari.SafariDriver;
 
 import java.time.Duration;
 
-public class CrossDriver {
-    private CrossDriver(){  //Driver classı başka classlardan obje oluşturularak kullanılmasın diye
-        // private bir constructor oluşturduk
 
+public class CrossDriver {
+
+
+    private CrossDriver() {
     }
+
     static WebDriver driver;
+
     public static WebDriver getDriver(String browser) {
-        browser = (browser ==null)?ConfigReader.getProperty("browser"):browser;
+     browser = browser == null? ConfigReader.getProperty("browser"):browser;
         if (driver == null) {
-            switch (browser){
+            switch (browser) {
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver();
                     break;
                 case "safari":
                     WebDriverManager.safaridriver().setup();
-                    driver=new SafariDriver();
+                    driver = new SafariDriver();
                     break;
                 case "firefox":
                     WebDriverManager.firefoxdriver().setup();
-                    driver=new FirefoxDriver();
+                    driver = new FirefoxDriver();
                     break;
                 case "headless-chrome":
                     WebDriverManager.chromedriver().setup();
@@ -40,22 +43,28 @@ public class CrossDriver {
 
             }
 
-
+            driver.manage().window().maximize();
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         }
 
         return driver;
     }
+
     public static void closeDriver() {
         if (driver != null) {
             driver.close();
-            driver=null;
+            driver = null;
         }
     }
-    public static void quitDriver(){
-        if (driver!=null){ //Driver a bir değer atanmışsa kapat
+
+    public static void quitDriver() {
+        if (driver != null) { //Driver a bir değer atanmışsa kapat
             driver.quit();
-            driver=null; //Driver ı kapattın sonra testte yeni bir site açılacaksa driverın tekrar null olması lazım
+            driver = null; //Driver ı kapattın sonra testte yeni bir site açılacaksa driverın tekrar null olması lazım
         }
 
     }
+
 }
+
+

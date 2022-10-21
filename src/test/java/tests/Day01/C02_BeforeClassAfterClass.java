@@ -1,6 +1,6 @@
 package tests.Day01;
 
-import Utilities.TestBase;
+import utilities.TestBase;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;

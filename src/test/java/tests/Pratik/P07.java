@@ -2,8 +2,8 @@ package tests.Pratik;
 
 
 import Pages.WebuniversityPage;
-import Utilities.Driver;
-import Utilities.ReusableMethods;
+import utilities.Driver;
+import utilities.ReusableMethods;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;

@@ -1,0 +1,3 @@
+2022-10-16 18:32:03,638 INFO t.l.Log4JTest1 [main] HepsiBurada sitesine gidilir
+2022-10-16 18:32:13,655 INFO t.l.Log4JTest1 [main] Ekran görüntüsü alınır
+2022-10-16 18:32:15,423 WARN t.l.Log4JTest1 [main] Driver kapatılır

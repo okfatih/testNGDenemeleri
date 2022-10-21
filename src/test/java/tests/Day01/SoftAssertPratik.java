@@ -1,10 +1,7 @@
 package tests.Day01;
 
-import Utilities.ConfigReader;
-import Utilities.Driver;
-import Utilities.TestBase;
+import utilities.TestBase;
 import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
