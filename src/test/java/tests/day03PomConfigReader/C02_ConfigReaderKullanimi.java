@@ -1,4 +1,4 @@
-package tests.day03Pom;
+package tests.day03PomConfigReader;
 
 import Pages.FacebookPage;
 import utilities.ConfigReader;

@@ -1,4 +1,4 @@
-package tests.day03Pom;
+package tests.day03PomConfigReader;
 
 import utilities.ConfigReader;
 import utilities.Driver;

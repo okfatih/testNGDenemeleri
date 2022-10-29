@@ -1,6 +1,9 @@
 package tests.October4;
 
 import Pages.AmazonPage;
+import Pages.MarktplaatsPage;
+import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
@@ -37,4 +40,6 @@ public class ScreenShotReusableMethod {
         // ReusableMethods.getScreenshotWebElement("aramaSonucu",amazonPage.aramaSonucu);
         Driver.quitDriver();
     }
+
+
 }
