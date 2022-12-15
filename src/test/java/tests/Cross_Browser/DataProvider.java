@@ -50,7 +50,7 @@ public class DataProvider {
         Object[][] arr = {{"Dexter Shoes"}, {"Ralph Lauren Oxford"},{"Levi's 502"}};
         return arr;
     }
-    @Test (dataProvider = "search")
+    @Test (dataProvider = "Aranacakelime")
     public void test2(String wordToBeSearched) {
         AmazonPage amazonPage = new AmazonPage();
         Driver.getDriver().get(ConfigReader.getProperty("amazonUrl"));
