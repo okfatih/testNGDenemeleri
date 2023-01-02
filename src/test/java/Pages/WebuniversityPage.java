@@ -16,6 +16,9 @@ public class WebuniversityPage {
     public WebElement text;
 
     @FindBy (xpath = "//li")
+    public List<WebElement> toDoListelemanlari;
+
+    @FindBy (xpath = "//li")
     public List<WebElement>streepToDoButtons;
 
     @FindBy (xpath = "//*[@class='fa fa-trash']")
